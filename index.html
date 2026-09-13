@@ -23,7 +23,10 @@
 
             <p>I have a few questions for you...</p>
 
-            <h2>Will you go on a date with me? 💕</h2>
+            <h2>
+                Hii Garima, will you come with me to the
+                food court / movie / shopping mall sometime? 😊💕
+            </h2>
 
             <button class="yes-btn" onclick="nextQuestion(1)">
                 YES ❤️
@@ -41,18 +44,28 @@
 
             <h1>Question 2 💕</h1>
 
-            <h2>What would you like to do with me? 🥰</h2>
+            <h2>
+                Thanks for saying yes! Where do you want to go with me? 🥰
+            </h2>
 
-            <button class="option-btn" onclick="selectAnswer(2, 'Movie 🎬')">
-                Movie 🎬
+            <button class="option-btn"
+                onclick="selectAnswer(2, 'Movie Hall 🎬')">
+                Movie Hall 🎬
             </button>
 
-            <button class="option-btn" onclick="selectAnswer(2, 'Dinner 🍕')">
-                Dinner 🍕
+            <button class="option-btn"
+                onclick="selectAnswer(2, 'Food Court 🍕')">
+                Food Court 🍕
             </button>
 
-            <button class="option-btn" onclick="selectAnswer(2, 'Long Walk 🌙')">
-                Long Walk 🌙
+            <button class="option-btn"
+                onclick="selectAnswer(2, 'Shopping Mall 🛍️')">
+                Shopping Mall 🛍️
+            </button>
+
+            <button class="option-btn"
+                onclick="selectAnswer(2, 'All of the above ❤️')">
+                All of the above ❤️
             </button>
 
         </div>
@@ -63,7 +76,9 @@
 
             <h1>Question 3 ❤️</h1>
 
-            <h2>Will you spend some quality time with me? 🥺</h2>
+            <h2>
+                You're definitely coming, right? 🥺
+            </h2>
 
             <button class="yes-btn" onclick="nextQuestion(3)">
                 YES ❤️
@@ -81,18 +96,23 @@
 
             <h1>Question 4 😌</h1>
 
-            <h2>Who is going to have the best day? ❤️</h2>
+            <h2>
+                Who should decide where to go? ❤️
+            </h2>
 
-            <button class="option-btn" onclick="selectAnswer(4, 'Me 😎')">
-                Me 😎
+            <button class="option-btn"
+                onclick="selectAnswer(4, 'You 😎')">
+                You 😎
             </button>
 
-            <button class="option-btn" onclick="selectAnswer(4, 'You 🥰')">
-                You 🥰
+            <button class="option-btn"
+                onclick="selectAnswer(4, 'Only You 🥰')">
+                Only You 🥰
             </button>
 
-            <button class="option-btn" onclick="selectAnswer(4, 'Both of us ❤️')">
-                Both of us ❤️
+            <button class="option-btn"
+                onclick="selectAnswer(4, 'Definitely You ❤️')">
+                Definitely You ❤️
             </button>
 
         </div>
@@ -103,7 +123,9 @@
 
             <h1>One Last Thing ❤️</h1>
 
-            <h2>When should we meet? 🥰</h2>
+            <h2>
+                When should we meet? 🥰
+            </h2>
 
             <p>Choose our date:</p>
 
@@ -127,37 +149,57 @@
 
             <div class="heart">❤️</div>
 
-            <h1>It's a Date! 🥰</h1>
+            <h1>
+                Garima, Can I Say It's a Date? 🥰
+            </h1>
 
             <p id="finalMessage"></p>
 
-            <h2>See you soon ❤️</h2>
+            <h2>
+                See you soon ❤️
+            </h2>
 
         </div>
 
     </div>
 
+
+    <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore-compat.js"></script>
 
-<script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyAll8iu89Ca0V0wJoDJpddkkcHYbtXBpEo",
-        authDomain: "love-website-3224b.firebaseapp.com",
-        projectId: "love-website-3224b",
-        storageBucket: "love-website-3224b.firebasestorage.app",
-        messagingSenderId: "648397246127",
-        appId: "1:648397246127:web:79365d07e01a84e5854e5a"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-
-    window.db = firebase.firestore();
-</script>
-
-<script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore-compat.js"></script>
 
 
+    <!-- FIREBASE CONFIGURATION -->
+    <script>
+
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyAll8iu89Ca0V0wJoDJpddkkcHYbtXBpEo",
+
+            authDomain: "love-website-3224b.firebaseapp.com",
+
+            projectId: "love-website-3224b",
+
+            storageBucket: "love-website-3224b.firebasestorage.app",
+
+            messagingSenderId: "648397246127",
+
+            appId: "1:648397246127:web:79365d07e01a84e5854e5a"
+
+        };
+
+
+        firebase.initializeApp(firebaseConfig);
+
+
+        window.db = firebase.firestore();
+
+    </script>
+
+
+    <!-- YOUR JAVASCRIPT -->
+    <script src="script.js"></script>
 
 
 </body>
