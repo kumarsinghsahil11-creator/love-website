@@ -1,0 +1,6 @@
+.env
+.env.*
+*.pem
+serviceAccountKey.json
+node_modules/
+.firebase/

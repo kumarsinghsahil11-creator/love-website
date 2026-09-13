@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Just For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- QUESTION 1 -->
+        <div class="question" id="question1">
+
+            <div class="heart">❤️</div>
+
+            <h1>Hey You... 🥰</h1>
+
+            <p>I have a few questions for you...</p>
+
+            <h2>Will you go on a date with me? 💕</h2>
+
+            <button class="yes-btn" onclick="nextQuestion(1)">
+                YES ❤️
+            </button>
+
+            <button class="no-btn" id="noButton">
+                NO 😏
+            </button>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+        <div class="question" id="question2" style="display: none;">
+
+            <h1>Question 2 💕</h1>
+
+            <h2>What would you like to do with me? 🥰</h2>
+
+            <button class="option-btn" onclick="selectAnswer(2, 'Movie 🎬')">
+                Movie 🎬
+            </button>
+
+            <button class="option-btn" onclick="selectAnswer(2, 'Dinner 🍕')">
+                Dinner 🍕
+            </button>
+
+            <button class="option-btn" onclick="selectAnswer(2, 'Long Walk 🌙')">
+                Long Walk 🌙
+            </button>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+        <div class="question" id="question3" style="display: none;">
+
+            <h1>Question 3 ❤️</h1>
+
+            <h2>Will you spend some quality time with me? 🥺</h2>
+
+            <button class="yes-btn" onclick="nextQuestion(3)">
+                YES ❤️
+            </button>
+
+            <button class="no-btn" id="noButton3">
+                NO 😏
+            </button>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+        <div class="question" id="question4" style="display: none;">
+
+            <h1>Question 4 😌</h1>
+
+            <h2>Who is going to have the best day? ❤️</h2>
+
+            <button class="option-btn" onclick="selectAnswer(4, 'Me 😎')">
+                Me 😎
+            </button>
+
+            <button class="option-btn" onclick="selectAnswer(4, 'You 🥰')">
+                You 🥰
+            </button>
+
+            <button class="option-btn" onclick="selectAnswer(4, 'Both of us ❤️')">
+                Both of us ❤️
+            </button>
+
+        </div>
+
+
+        <!-- DATE AND TIME -->
+        <div class="question" id="dateQuestion" style="display: none;">
+
+            <h1>One Last Thing ❤️</h1>
+
+            <h2>When should we meet? 🥰</h2>
+
+            <p>Choose our date:</p>
+
+            <input type="date" id="date">
+
+            <p>Choose our time:</p>
+
+            <input type="time" id="time">
+
+            <br><br>
+
+            <button class="yes-btn" onclick="submitDate()">
+                Confirm Our Date ❤️
+            </button>
+
+        </div>
+
+
+        <!-- FINAL -->
+        <div class="question" id="final" style="display: none;">
+
+            <div class="heart">❤️</div>
+
+            <h1>It's a Date! 🥰</h1>
+
+            <p id="finalMessage"></p>
+
+            <h2>See you soon ❤️</h2>
+
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore-compat.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAll8iu89Ca0V0wJoDJpddkkcHYbtXBpEo",
+        authDomain: "love-website-3224b.firebaseapp.com",
+        projectId: "love-website-3224b",
+        storageBucket: "love-website-3224b.firebasestorage.app",
+        messagingSenderId: "648397246127",
+        appId: "1:648397246127:web:79365d07e01a84e5854e5a"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    window.db = firebase.firestore();
+</script>
+
+<script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
